@@ -1,0 +1,20 @@
+import React, { useState } from 'react';
+
+function App() {
+  const [person, setPerson] = useState({});
+
+  const handleButtonClick = () => {
+    const newPerson = { ...person, name: 'João', age: 30 };
+    setPerson(newPerson);
+  };
+
+  return (
+    <div>
+      <button onClick={handleButtonClick}>Adicionar pessoa</button>
+      <p>Nome: {person.name}</p>
+      <p>Idade: {person.age}</p>
+    </div>
+  );
+}
+
+export default App;
